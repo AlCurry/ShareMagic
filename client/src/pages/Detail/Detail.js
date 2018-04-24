@@ -58,7 +58,7 @@ class Detail extends Component {
         <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
           <div class="container text-center text-md-left">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">
                   Disclaimer
                 </h5>
@@ -68,17 +68,6 @@ class Detail extends Component {
                 </p>
               </div>
               <hr class="clearfix w-100 d-md-none" />
-              <div class="col-md-6">
-                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
-                <ul class="list-inline">
-                  <li>
-                    *<a href="#!">Link 1</a>*
-                    <a href="#!">Link 2</a>
-                    *<a href="#!">Link 3</a>
-                    *<a href="#!">Link 4</a>*
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <hr />

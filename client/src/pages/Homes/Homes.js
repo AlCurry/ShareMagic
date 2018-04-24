@@ -178,7 +178,7 @@ class Homes extends Component {
         <footer className="page-footer font-small stylish-color-dark pt-4 mt-4">
           <div className="container text-center text-md-left">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
                   Disclaimer
                 </h5>
@@ -197,7 +197,7 @@ class Homes extends Component {
                 <h5 className="mb-1">Register for free</h5>
               </li>
               <li className="list-inline-item">
-                <a href="#!" className="btn btn-danger btn-rounded">
+                <a href="/login" className="btn btn-danger btn-rounded">
                   Sign up!
                 </a>
               </li>

@@ -21,7 +21,7 @@ class Bookings extends Component {
         <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
           <div class="container text-center text-md-left">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">
                   Disclaimer
                 </h5>
