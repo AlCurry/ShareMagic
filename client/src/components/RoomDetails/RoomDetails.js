@@ -11,7 +11,10 @@ class RoomDetails extends Component {
   renderEmptyDetails() {
     return <div>Loading....</div>;
   }
-
+  handleBookingRoute() {
+    alert("Sent a request! expect to see an email from the Owner!");
+    window.location = "/";
+  }
   renderRoomDetails() {
     const details = this.props.details;
     const URL = "https://challenges.1aim.com/roombooking";
@@ -32,6 +35,7 @@ class RoomDetails extends Component {
 
         <button
           type="button"
+          onClick={() => this.handleBookingRoute()}
           className="to-bookbtn btn btn-success btn-lg btn-block"
           data-toggle="modal"
           data-target="#booking-modal">
