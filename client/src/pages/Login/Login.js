@@ -15,20 +15,15 @@ class Login extends Component {
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
-  //
-  // checkAuth = () => {
-  //   axios.get("/auth").then(function(response) {
-  //     console.log(response.data); // ex.: { user: 'Your User'}
-  //     console.log(response.status); // ex.: 200
-  //   });
-  // };
 
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
     });
   };
-
+  handleRegisterRoute() {
+    window.location = "/register";
+  }
   handleSubmit = event => {
     event.preventDefault();
     axios
@@ -48,7 +43,8 @@ class Login extends Component {
   }
   render() {
     return (
-      <div className="Login">
+      <div className="Login container">
+        <br /> <br /> <br />
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>
@@ -73,6 +69,13 @@ class Login extends Component {
             disabled={!this.validateForm()}
             type="submit">
             Login
+          </Button>
+          <Button
+            block
+            bsSize="large"
+            onClick={() => this.handleRegisterRoute()}
+            type="submit">
+            Register
           </Button>
         </form>
       </div>
