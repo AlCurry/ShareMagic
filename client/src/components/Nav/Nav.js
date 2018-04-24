@@ -30,10 +30,10 @@ class Nav extends Component {
     window.location = "/login";
   }
   handleHomeRoute() {
-    window.location = "/login";
+    window.location = "/";
   }
   handleBookingRoute() {
-    window.location = "/login";
+    window.location = "/bookings";
   }
   render() {
     return (
@@ -46,7 +46,9 @@ class Nav extends Component {
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav>
               <NavItem>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/" onClick={() => this.handleHomeRoute()}>
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/login" onClick={() => this.handleLoginRoute()}>
@@ -54,7 +56,11 @@ class Nav extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/Bookings">Bookings</NavLink>
+                <NavLink
+                  to="/bookings"
+                  onClick={() => this.handleBookingRoute()}>
+                  Bookings
+                </NavLink>
               </NavItem>
             </NavbarNav>
           </Collapse>
