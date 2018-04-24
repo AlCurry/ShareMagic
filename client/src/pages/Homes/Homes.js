@@ -183,7 +183,7 @@ class Homes extends Component {
                   Disclaimer
                 </h5>
                 <p>
-                  We are not responsible for any incorrect bookings. Copyrigth
+                  We are not responsible for any incorrect bookings. Copyright
                   ShareMagic 2018
                 </p>
               </div>
