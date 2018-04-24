@@ -8,7 +8,7 @@ router
 
 // Matches with "/api/homes/:id"
 router
-  .route("/api/:id")
+  .route("/api/homes/:id")
   .get(homesController.findById)
   .put(homesController.update)
   .delete(homesController.remove);
