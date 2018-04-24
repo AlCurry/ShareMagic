@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
+// import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import LazyHero from 'react-lazy-hero';
+
 
 class Homes extends Component {
   state = {
@@ -61,9 +63,9 @@ class Homes extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
+            {/* <Jumbotron>
               <h1>What Homes Should I cop?</h1>
-            </Jumbotron>
+            </Jumbotron> */}
             <form>
               <Input
                 value={this.state.title}
@@ -90,10 +92,12 @@ class Homes extends Component {
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Homes On My List</h1>
-            </Jumbotron>
+
+          <Col size="md-6">
+            {/* <LazyHero>
+              <h1>Share House</h1>
+            </LazyHero> */}
+
             {this.state.homes.length ? (
               <List>
                 {this.state.homes.map(home => (

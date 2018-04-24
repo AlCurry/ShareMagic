@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron";
+// import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 
 class Detail extends Component {
@@ -21,11 +21,11 @@ class Detail extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
+            {/* <Jumbotron>
               <h1>
                 {this.state.home.title} by {this.state.home.owner}
               </h1>
-            </Jumbotron>
+            </Jumbotron> */}
           </Col>
         </Row>
         <Row>

@@ -22,6 +22,16 @@
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
-    "mongoose": "^5.0.11"
-  }
+    "mongoose": "^5.0.11",
+    "react-lazy-hero": "^0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peakcodes/ShareMagic.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/peakcodes/ShareMagic/issues"
+  },
+  "homepage": "https://github.com/peakcodes/ShareMagic#readme"
 }
