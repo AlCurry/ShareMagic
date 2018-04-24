@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
+import LazyHeros2 from "../../components/LazyHero2"
 
 class Detail extends Component {
   state = {
@@ -21,20 +22,26 @@ class Detail extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
+          <LazyHeros2>
               <h1>
                 {this.state.home.title} by {this.state.home.owner}
               </h1>
-            </Jumbotron>
+            </LazyHeros2>
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Synopsis</h1>
-              <p>{this.state.home.address}</p>
+          <Col size="md-12">
+            <article class="details1">
+              <br/>
+              <h4 id="housetitle">{this.state.home.title}</h4>
+              <h4>Address:</h4>
+              <p>{this.state.home.address} {this.state.home.city} {this.state.home.state} {this.state.home.zipcode}</p>
+              <h4>Bedrooms:</h4>
               <p>{this.state.home.bedrooms}</p>
+              <h4>Bathrooms:</h4>
               <p>{this.state.home.bathrooms}</p>
+              <h4>House Description:</h4>
+              <p>{this.state.home.description}</p>
             </article>
           </Col>
         </Row>

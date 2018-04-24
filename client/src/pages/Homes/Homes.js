@@ -7,6 +7,8 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Booking from "../../components/Booking";
+import LazyHero from "react-lazy-hero";
+import LazyHeros from "../../components/LazyHero";
 
 class Homes extends Component {
   state = {
@@ -64,12 +66,15 @@ class Homes extends Component {
   render() {
     return (
       <Container fluid>
+      <LazyHeros/>
+        <br/>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
-              <h1>Add a home!</h1>
-            </Jumbotron>
-            <form>
+          <LazyHero imageSrc="https://s-media-cache-ak0.pinimg.com/originals/b0/8c/0d/b08c0de61293ebc9f2d57a2adbfdcbe9.jpg" opacity=".33">
+                <h1 class="addview">Add a House</h1>
+            </LazyHero>
+            <br/>
+            <form className="mb-5">
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
@@ -86,7 +91,29 @@ class Homes extends Component {
                 value={this.state.address}
                 onChange={this.handleInputChange}
                 name="address"
+                icon="road"
                 placeholder="Address (Optional)"
+              />
+              <TextArea
+                value={this.state.city}
+                onChange={this.handleInputChange}
+                name="city"
+                icon="road"
+                placeholder="City (Optional)"
+              />
+              <TextArea
+                value={this.state.state}
+                onChange={this.handleInputChange}
+                name="state"
+                icon="road"
+                placeholder="State (Optional)"
+              />
+              <TextArea
+                value={this.state.zipcode}
+                onChange={this.handleInputChange}
+                name="zipcode"
+                icon="road"
+                placeholder="Zipcode (Optional)"
               />
               <TextArea
                 value={this.state.bedrooms}
@@ -100,6 +127,12 @@ class Homes extends Component {
                 name="bathrooms"
                 placeholder="Bathrooms (Optional)"
               />
+              <TextArea
+                value={this.state.description}
+                onChange={this.handleInputChange}
+                name="description"
+                placeholder="House Description (Optional)"
+              />
               <FormBtn
                 disabled={!(this.state.owner && this.state.title)}
                 onClick={this.handleFormSubmit}>
@@ -109,20 +142,23 @@ class Homes extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Home List</h1>
-            </Jumbotron>
+          <LazyHero imageSrc="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1485547918/new-york-city-skyline-BIGCITY0117.jpg?itok=po0Op8ou" opacity=".33">
+          <h1 class="addview">Home List</h1>
+            </LazyHero>
+            <br/>
             {this.state.homes.length ? (
               <List>
                 {this.state.homes.map(home => (
                   <ListItem key={home._id}>
                     <Link to={"/Homes/" + home._id}>
                       <strong>
-                        {home.title} owned by {home.owner}
+                        {home.title}{` owned by `+ home.owner}
                         <br/>
-                        with {home.bedrooms} Bedrooms and {home.bathrooms} Bathrooms
                         <br/>
-                        at {home.address} 
+                        {`with `+ home.bedrooms +` Bedrooms`}{` and `+ home.bathrooms +` Bathrooms`}
+                        <br/>
+                        <br/>
+                        {home.city} {home.state}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteHome(home._id)} />
