@@ -6,7 +6,6 @@ import Register from "./pages/Register";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import css from "./css.css";
 import Bookings from "./pages/Bookings";
 
 const App = () => (

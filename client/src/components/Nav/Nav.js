@@ -6,16 +6,12 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  NavLink,
-  Fa,
-  Container,
-  Mask,
-  View
+  NavLink
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./Nav.css";
 
-class Nav extends React.Component {
+class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,6 +26,15 @@ class Nav extends React.Component {
       collapse: !this.state.collapse
     });
   }
+  handleLoginRoute() {
+    window.location = "/login";
+  }
+  handleHomeRoute() {
+    window.location = "/login";
+  }
+  handleBookingRoute() {
+    window.location = "/login";
+  }
   render() {
     return (
       <Router>
@@ -39,12 +44,14 @@ class Nav extends React.Component {
           </NavbarBrand>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
           <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav center>
-              <NavItem active>
+            <NavbarNav>
+              <NavItem>
                 <NavLink to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/login">Login</NavLink>
+                <NavLink to="/login" onClick={() => this.handleLoginRoute()}>
+                  Login
+                </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/Bookings">Bookings</NavLink>
