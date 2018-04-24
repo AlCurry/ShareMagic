@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Fa, Container, Mask, View } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './Nav.css';
+import React, { Component } from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarNav,
+  NavbarToggler,
+  Collapse,
+  NavItem,
+  NavLink
+} from "mdbreact";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./Nav.css";
 
 
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-      this.state = {
-        collapse: false,
-        isWideEnough: false,
-      };
-  this.onClick = this.onClick.bind(this);
-}
+    this.state = {
+      collapse: false,
+      isWideEnough: false
+    };
+    this.onClick = this.onClick.bind(this);
+  }
 
 onClick(){
   this.setState({

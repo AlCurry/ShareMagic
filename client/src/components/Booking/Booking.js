@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import DateLabel from '../DateLabel';
-import RoomList from '../RoomList';
-import RoomDetails from '../RoomDetails'
-
+import React, { Component } from "react";
+// import DateLabel from '../DateLabel';
+// import RoomList from "../RoomList";
+import RoomDetails from "../RoomDetails";
 
 class Booking extends Component {
   constructor(props) {
@@ -28,9 +27,12 @@ class Booking extends Component {
   onIncrement(num = 1) {
     let displayedDate = this.state.displayedDate;
     displayedDate.setDate(displayedDate.getDate() + 1);
-    this.setState({
-      displayedDate: displayedDate
-    }, () => this.fetchRooms());
+    this.setState(
+      {
+        displayedDate: displayedDate
+      },
+      () => this.fetchRooms()
+    );
   }
 
   onDecrement(num = 1) {
@@ -39,9 +41,12 @@ class Booking extends Component {
 
     if (state.currentDate < displayedDate) {
       displayedDate.setDate(displayedDate.getDate() - 1);
-      this.setState({
-        displayedDate: displayedDate
-      }, () => this.fetchRooms());
+      this.setState(
+        {
+          displayedDate: displayedDate
+        },
+        () => this.fetchRooms()
+      );
     }
   }
 
@@ -50,20 +55,22 @@ class Booking extends Component {
   }
 
   fetchRooms() {
-    const URL = 'https://challenges.1aim.com/roombooking/getrooms';
-        
+    const URL = "https://challenges.1aim.com/roombooking/getrooms";
+
     const fetchOptions = {
-      method: 'post',
+      method: "post",
       body: JSON.stringify({
         date: this.state.displayedDate / 1000
       })
-    }
+    };
 
     fetch(URL, fetchOptions)
       .then(res => res.json())
-      .then(json => this.setState({
-        rooms: json
-      }));
+      .then(json =>
+        this.setState({
+          rooms: json
+        })
+      );
   }
 
   render() {
@@ -71,15 +78,22 @@ class Booking extends Component {
 
     return (
       <div className="container-fluid">
-        <div className='row'>
-          <DateLabel date={this.state.displayedDate} onIncrement={this.onIncrement} onDecrement={this.onDecrement} />
+        <div className="row">
+          {/* <DateLabel date={this.state.displayedDate} onIncrement={this.onIncrement} onDecrement={this.onDecrement} /> */}
         </div>
-        <div className='row room-group'>
-          <RoomList className='col-xs-6 col-md-4' roomList={rooms} handleClick={this.handleClick} />
-          <RoomDetails className='col-xs-6 col-md-8' details={rooms[this.state.selRoom]} />
+        <div className="row room-group">
+          {/* <RoomList
+            className="col-xs-6 col-md-4"
+            roomList={rooms}
+            handleClick={this.handleClick}
+          /> */}
+          <RoomDetails
+            className="col-xs-6 col-md-8"
+            details={rooms[this.state.selRoom]}
+          />
         </div>
       </div>
-      );
+    );
   }
 }
 
