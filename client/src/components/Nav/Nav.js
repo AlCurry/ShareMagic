@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLi
 import { BrowserRouter as Router } from 'react-router-dom';
 import './Nav.css';
 
+
 class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ render() {
             <Router>
               <Navbar dark expand="md" fixed="top" scrolling>
                 <NavbarBrand href="/">
-                    <strong>SHAREMAGIC</strong>
+                <img src= 'sharehouse-color.png'/>
                 </NavbarBrand>
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>

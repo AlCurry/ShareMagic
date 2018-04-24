@@ -36,5 +36,6 @@
   "bugs": {
     "url": "https://github.com/peakcodes/ShareMagic/issues"
   },
-  "homepage": "https://github.com/peakcodes/ShareMagic#readme"
+  "homepage": "https://github.com/peakcodes/ShareMagic#readme",
+  "keywords": []
 }
