@@ -33,6 +33,8 @@ class Detail extends Component {
             <article>
               <h1>Synopsis</h1>
               <p>{this.state.home.address}</p>
+              <p>{this.state.home.bedrooms}</p>
+              <p>{this.state.home.bathrooms}</p>
             </article>
           </Col>
         </Row>

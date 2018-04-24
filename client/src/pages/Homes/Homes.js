@@ -6,13 +6,16 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import Booking from "../../components/Booking";
 
 class Homes extends Component {
   state = {
     homes: [],
     title: "",
     owner: "",
-    address: ""
+    address: "",
+    bedrooms: "",
+    bathrooms: ""
   };
 
   componentDidMount() {
@@ -23,7 +26,7 @@ class Homes extends Component {
     console.log("before api");
     API.getHomes()
       .then(res => {
-        this.setState({ homes: res.data, title: "", owner: "" });
+        this.setState({ homes: res.data, title: "", owner: "", addres: '', bedrooms: '', bathrooms: '' });
         console.log("added homes to state");
       })
       .catch(err => console.log(err));
@@ -49,7 +52,9 @@ class Homes extends Component {
       API.saveHome({
         title: this.state.title,
         owner: this.state.owner,
-        address: this.state.address
+        address: this.state.address,
+        bedrooms: this.state.bedrooms,
+        bathrooms: this.state.bathrooms
       })
         .then(res => this.loadHomes())
         .catch(err => console.log(err));
@@ -62,7 +67,7 @@ class Homes extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Homes Should I cop?</h1>
+              <h1>Add a home!</h1>
             </Jumbotron>
             <form>
               <Input
@@ -83,24 +88,41 @@ class Homes extends Component {
                 name="address"
                 placeholder="Address (Optional)"
               />
+              <TextArea
+                value={this.state.bedrooms}
+                onChange={this.handleInputChange}
+                name="bedrooms"
+                placeholder="Bedrooms (Optional)"
+              />
+              <TextArea
+                value={this.state.bathrooms}
+                onChange={this.handleInputChange}
+                name="bathrooms"
+                placeholder="Bathrooms (Optional)"
+              />
               <FormBtn
                 disabled={!(this.state.owner && this.state.title)}
                 onClick={this.handleFormSubmit}>
-                Submit
+                Add House!
               </FormBtn>
+              <Booking/>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Homes On My List</h1>
+              <h1>Home List</h1>
             </Jumbotron>
             {this.state.homes.length ? (
               <List>
                 {this.state.homes.map(home => (
                   <ListItem key={home._id}>
-                    <Link to={"/homes/" + home._id}>
+                    <Link to={"/Homes/" + home._id}>
                       <strong>
-                        {home.title} by {home.author}
+                        {home.title} owned by {home.owner}
+                        <br/>
+                        with {home.bedrooms} Bedrooms and {home.bathrooms} Bathrooms
+                        <br/>
+                        at {home.address} 
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteHome(home._id)} />
