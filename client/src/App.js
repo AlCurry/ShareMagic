@@ -7,6 +7,7 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Bookings from "./pages/Bookings";
+import "./css.css";
 
 const App = () => (
   <Router>

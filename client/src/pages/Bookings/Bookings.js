@@ -18,8 +18,10 @@ class Bookings extends Component {
             </Button>
           </Col>
         </Row>
+        <br/>
+        <br/>
         <footer className="page-footer font-small stylish-color-dark pt-4 mt-4">
-          <div className="container text-center text-md-left">
+          <div className="container text-center">
             <div className="row">
               <div className="col-md-12">
                 <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">

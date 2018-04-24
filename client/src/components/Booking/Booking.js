@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import DateLabel from '../DateLabel';
-// import RoomList from "../RoomList";
+import DateLabel from '../DateLabel';
+import RoomList from "../RoomList";
 import RoomDetails from "../RoomDetails";
 
 class Booking extends Component {
@@ -79,14 +79,14 @@ class Booking extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          {/* <DateLabel date={this.state.displayedDate} onIncrement={this.onIncrement} onDecrement={this.onDecrement} /> */}
+          <DateLabel date={this.state.displayedDate} onIncrement={this.onIncrement} onDecrement={this.onDecrement} />
         </div>
         <div className="row room-group">
-          {/* <RoomList
+          <RoomList
             className="col-xs-6 col-md-4"
             roomList={rooms}
             handleClick={this.handleClick}
-          /> */}
+          />
           <RoomDetails
             className="col-xs-6 col-md-8"
             details={rooms[this.state.selRoom]}

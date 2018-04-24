@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Col, Row, Container } from "../../components/Grid";
+import "./login.css";
+import LazyHero from "react-lazy-hero";
+import LazyHeros4 from "../../components/LazyHero4";
 
 class Login extends Component {
   constructor(props) {
@@ -43,7 +47,9 @@ class Login extends Component {
   }
   render() {
     return (
-      <div className="Login container">
+      <Container fluid>
+      <LazyHeros4/>
+      <div className="Login">
         <br /> <br /> <br />
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
@@ -78,7 +84,39 @@ class Login extends Component {
             Register
           </Button>
         </form>
+        <br/>
+        <footer className="page-footer font-small stylish-color-dark pt-4 mt-4">
+          <div className="container text-center">
+            <div className="row">
+              <div className="col-md-12">
+                <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+                  Disclaimer
+                </h5>
+                <p>
+                  We are not responsible for any incorrect bookings. Copyrigth
+                  ShareMagic 2018
+                </p>
+              </div>
+              <hr className="clearfix w-100 d-md-none" />
+            </div>
+          </div>
+          <hr />
+          <div className="text-center py-3">
+            <ul className="list-unstyled list-inline mb-0">
+              <li className="list-inline-item">
+                <h5 className="mb-1">Register for free</h5>
+              </li>
+              <li className="list-inline-item">
+                <a href="/login" className="btn btn-danger btn-rounded">
+                  Sign up!
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr />
+        </footer>
       </div>
+      </Container>
     );
   }
 }

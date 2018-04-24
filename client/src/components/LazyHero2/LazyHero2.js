@@ -11,6 +11,7 @@ const LazyHeros2 = props => {
         imageSrc={`http://myfancyhouse.com/wp-content/uploads/2012/11/First-Crescent-Amazing-Vacation-House-in-South-Africa-1.jpg`}
         isCentered={true}
         parallaxOffset={25}
+        opacity={.23}
         style={{ overflow: "hidden" }}
         transitionDuration={25}
         transitionTimingFunction={"ease-in-out"}>

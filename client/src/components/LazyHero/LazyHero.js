@@ -11,6 +11,7 @@ const LazyHeros = props => {
         imageSrc={`https://garrtech-group.com/wp-content/uploads/2015/04/golden-beach-homes-sale.jpg`}
         isCentered={true}
         parallaxOffset={25}
+        opacity={.23}
         style={{ overflow: "hidden" }}
         transitionDuration={25}
         transitionTimingFunction={"ease-in-out"}>

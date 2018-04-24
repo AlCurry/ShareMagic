@@ -55,11 +55,13 @@ class Detail extends Component {
             </Button>
           </Col>
         </Row>
-        <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
-          <div class="container text-center text-md-left">
-            <div class="row">
-              <div class="col-md-12">
-                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">
+        <br/>
+        <br/>
+        <footer className="page-footer font-small stylish-color-dark pt-4 mt-4">
+          <div className="container text-center">
+            <div className="row">
+              <div className="col-md-12">
+                <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
                   Disclaimer
                 </h5>
                 <p>
@@ -67,17 +69,17 @@ class Detail extends Component {
                   ShareMagic 2018
                 </p>
               </div>
-              <hr class="clearfix w-100 d-md-none" />
+              <hr className="clearfix w-100 d-md-none" />
             </div>
           </div>
           <hr />
-          <div class="text-center py-3">
-            <ul class="list-unstyled list-inline mb-0">
-              <li class="list-inline-item">
-                <h5 class="mb-1">Register for free</h5>
+          <div className="text-center py-3">
+            <ul className="list-unstyled list-inline mb-0">
+              <li className="list-inline-item">
+                <h5 className="mb-1">Register for free</h5>
               </li>
-              <li class="list-inline-item">
-                <a href="#!" class="btn btn-danger btn-rounded">
+              <li className="list-inline-item">
+                <a href="/login" className="btn btn-danger btn-rounded">
                   Sign up!
                 </a>
               </li>

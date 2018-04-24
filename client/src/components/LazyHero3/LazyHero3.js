@@ -11,6 +11,7 @@ const LazyHeros3 = props => {
         imageSrc={`http://www.luxury-sardinia.com/wp-content/uploads/2018/04/Luxury-Hotels-Hotel-Colonna-Pevero-Porto-Cervo-3.jpg`}
         isCentered={true}
         parallaxOffset={25}
+        opacity={.23}
         style={{ overflow: "hidden" }}
         transitionDuration={25}
         transitionTimingFunction={"ease-in-out"}>
