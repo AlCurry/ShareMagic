@@ -8,9 +8,9 @@ const LazyHeros2 = (props) => {
     return (
         <div className="LazyHero">
             <LazyHero
-                imageSrc={`https://garrtech-group.com/wp-content/uploads/2015/04/golden-beach-homes-sale.jpg`}
+                imageSrc={`http://myfancyhouse.com/wp-content/uploads/2012/11/First-Crescent-Amazing-Vacation-House-in-South-Africa-1.jpg`}
                 isCentered={true}
-                opacity={.33}
+                opacity={0}
                 parallaxOffset={25}
                 style={{ overflow: 'hidden' }}
                 transitionDuration={25}

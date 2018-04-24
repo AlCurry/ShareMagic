@@ -4,10 +4,9 @@ import Homes from "./pages/Homes";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import css from "./css.css"
-import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
+import css from "./css.css";
+import Bookings from "./pages/Bookings";
+
 
 
 const App = () => (
@@ -18,6 +17,7 @@ const App = () => (
         <Route exact path="/" component={Homes} />
         <Route exact path="/homes" component={Homes} />
         <Route exact path="/homes/:id" component={Detail} />
+        <Route exact path="/bookings" component={Bookings} />
         <Route component={NoMatch} />
       </Switch>
     </div>

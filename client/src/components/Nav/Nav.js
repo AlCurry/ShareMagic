@@ -27,7 +27,7 @@ render() {
                 </NavbarBrand>
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
-                  <NavbarNav left>
+                  <NavbarNav center>
                     <NavItem active>
                         <NavLink to="/">Home</NavLink>
                     </NavItem>
@@ -35,7 +35,7 @@ render() {
                         <NavLink to="/Login">Login</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/Contact">Contact</NavLink>
+                        <NavLink to="/Bookings">Bookings</NavLink>
                     </NavItem>
                   </NavbarNav>
                 </Collapse>
